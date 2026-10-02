@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pink coquette - portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#ffc2d6; --pink2:#ff8fab; --pink3:#ffe5ec; --brown:#5a323f; --white:#fffafb;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background: var(--pink3);
+  font-family:Poppins,sans-serif; color:var(--brown);
+  overflow-x:hidden; min-height:100vh;
+  background-image: radial-gradient(#ff8fab33 2px, transparent 2px);
+  background-size:30px 30px;
+}
+/* RIBBON FALL */
+.ribbon{position:fixed; top:-10%; font-size:22px; animation:fall linear forwards; pointer-events:none; z-index:9999}
+@keyframes fall{ to{ transform:translateY(120vh) rotate(360deg); } }
+
+/* TOP BAR MACOS */
+.topbar{
+  height:28px; background:rgba(255,255,255,0.7); backdrop-filter:blur(10px);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 16px; font-size:12px; position:fixed; top:0; width:100%; z-index:100; border-bottom:1px solid #ffc2d6;
+}
+.dock{
+  position:fixed; bottom:15px; left:50%; transform:translateX(-50%);
+  background:rgba(255,255,255,0.6); backdrop-filter:blur(15px);
+  border:1px solid #fff; border-radius:20px; padding:8px 16px;
+  display:flex; gap:12px; z-index:100; box-shadow:0 10px 30px #ff8fab44;
+}
+.dock a{ width:42px; height:42px; background:white; border-radius:12px; display:grid; place-items:center; text-decoration:none; font-size:20px; transition:.3s; cursor:pointer}
+.dock a:hover{ transform:translateY(-8px) scale(1.1) }
+
+.container{ padding:60px 20px 100px; max-width:1100px; margin:auto; display:grid; gap:30px }
+
+.window{
+  background:rgba(255,255,255,0.85); backdrop-filter:blur(12px);
+  border-radius:18px; border:1.5px solid white; box-shadow:0 20px 50px #ff8fab30;
+  overflow:hidden; transition:.4s; animation:pop .6s ease both;
+}
+@keyframes pop{ from{transform:translateY(30px) scale(.95); opacity:0} to{transform:none; opacity:1} }
+.win-head{ height:38px; display:flex; align-items:center; padding:0 14px; gap:8px; background:linear-gradient(to right,#fff,#ffe5ec); cursor:grab}
+.dot{ width:12px; height:12px; border-radius:50% }
+.win-body{ padding:22px }
+
+.hero{ display:grid; grid-template-columns:1.2fr .8fr; gap:20px; align-items:center }
+.hero h1{ font-family:'Instrument Serif',serif; font-size:clamp(32px,6vw,64px); line-height:.9; }
+.hero h1 i{ color:var(--pink2); font-weight:400 }
+.tag{ display:inline-block; background:var(--pink); padding:6px 14px; border-radius:999px; font-size:12px; margin-bottom:12px }
+
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:20px }
+.card{ background:white; border-radius:14px; padding:16px; border:1px dashed #ffc2d6 }
+.card h4{ font-family:'Instrument Serif'; font-size:22px; margin-bottom:6px }
+
+.badge{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px }
+.badge span{ background:var(--pink3); border:1px solid var(--pink); padding:4px 10px; border-radius:999px; font-size:11px }
+
+.contact input, .contact textarea{
+  width:100%; padding:12px 14px; border-radius:12px; border:1.5px solid #ffc2d6; background:#fffafb; outline:none; margin-bottom:10px; font-family:Poppins;
+}
+.contact button{
+  width:100%; padding:12px; border:none; border-radius:12px; background:var(--brown); color:white; cursor:pointer; transition:.3s
+}
+.contact button:hover{ background:var(--pink2) }
+
+@media(max-width:800px){
+  .hero, .grid2{ grid-template-columns:1fr }
+  .dock{ bottom:10px; scale:.9 }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>🍓 coquetteOS — Fri 2 Oct 11:03</div>
+  <div>🎀 100% ✿ wifi ● batt</div>
+</div>
+
+<div class="container">
+
+  <!-- BERANDA -->
+  <div class="window" id="beranda">
+    <div class="win-head"><div class="dot" style="background:#ff5f57"></div><div class="dot" style="background:#ffbd2e"></div><div class="dot" style="background:#28ca42"></div><span style="margin-left:10px;font-size:12px">beranda.app</span></div>
+    <div class="win-body hero">
+      <div>
+        <div class="tag">🎀 available for new project</div>
+        <h1>hi, i'm <i>you</i> —<br>coquette designer & dev.</h1>
+        <p style="margin:14px 0; opacity:.7; line-height:1.6">Aku bikin website yang manis, rapi, dan super interaktif kayak macOS. Pink, pita, soft girl vibes tapi tetap profesional.</p>
+        <div class="badge"><span>🎀 PPLG</span><span>💖 UI/UX</span><span>🍰 Frontend</span><span>🎀 Coquette</span></div>
+      </div>
+      <div style="background:var(--pink); border-radius:20px; padding:14px; text-align:center">
+        <div style="background:white; border-radius:16px; padding:20px">
+          <div style="font-size:80px">🎀</div>
+          <p style="font-family:'Instrument Serif';font-size:28px">you's mac</p>
+          <small>Tasikmalaya, ID • 2026</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <!-- RIWAYAT -->
+    <div class="window" id="riwayat">
+      <div class="win-head"><div class="dot" style="background:#ff5f57"></div><div class="dot" style="background:#ffbd2e"></div><div class="dot" style="background:#28ca42"></div><span style="margin-left:10px;font-size:12px">riwayat.rtf</span></div>
+      <div class="win-body">
+        <h3 style="font-family:'Instrument Serif';font-size:26px;margin-bottom:10px">🎀 riwayat</h3>
+        <div class="card"><h4>2026 - Sekarang</h4><p>SMK - Jurusan PPLG <br>Belajar coding, design, dan bikin projek web coquette.</p></div>
+        <div class="card" style="margin-top:10px"><h4>2026 - Freelance</h4><p>Bikin portfolio, poster, dan landing page untuk teman.</p></div>
+      </div>
+    </div>
+
+    <!-- PROFIL -->
+    <div class="window" id="profil">
+      <div class="win-head"><div class="dot" style="background:#ff5f57"></div><div class="dot" style="background:#ffbd2e"></div><div class="dot" style="background:#28ca42"></div><span style="margin-left:10px;font-size:12px">profil.me</span></div>
+      <div class="win-body">
+        <h3 style="font-family:'Instrument Serif';font-size:26px;margin-bottom:10px">💌 profil</h3>
+        <p style="opacity:.8;line-height:1.7">Aku suka warna pink, detail kecil, dan UI yang soft. Fokus di frontend + design aesthetic. Hobi: ngopi, foto, koleksi pita.</p>
+        <div class="badge"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span><span>Canva</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <!-- PENGALAMAN -->
+    <div class="window" id="pengalaman">
+      <div class="win-head"><div class="dot" style="background:#ff5f57"></div><div class="dot" style="background:#ffbd2e"></div><div class="dot" style="background:#28ca42"></div><span style="margin-left:10px;font-size:12px">pengalaman.app</span></div>
+      <div class="win-body">
+        <h3 style="font-family:'Instrument Serif';font-size:26px;margin-bottom:10px">✨ pengalaman</h3>
+        <div class="card"><h4>🌸 Fotopolio Website</h4><p>Portfolio grid aesthetic dengan filter pink coquette</p></div>
+        <div class="card" style="margin-top:10px"><h4>🍰 Toko Kue Landing</h4><p>Landing page responsif + animasi pita jatuh</p></div>
+        <div class="card" style="margin-top:10px"><h4>🎀 CoquetteOS</h4><p>Tema macOS pink ini!</p></div>
+      </div>
+    </div>
+
+    <!-- KONTAK -->
+    <div class="window contact" id="kontak">
+      <div class="win-head"><div class="dot" style="background:#ff5f57"></div><div class="dot" style="background:#ffbd2e"></div><div class="dot" style="background:#28ca42"></div><span style="margin-left:10px;font-size:12px">kontak.mail</span></div>
+      <div class="win-body">
+        <h3 style="font-family:'Instrument Serif';font-size:26px;margin-bottom:10px">💌 kontak aku</h3>
+        <input placeholder="Laura Cantika">
+        <input placeholder="0815-7348-7477">
+        <textarea rows="3" placeholder="love u..."></textarea>
+        <button onclick="alert('pesan terkirim! 🎀 makasih yaa')">kirim 🎀</button>
+        <p style="font-size:11px; text-align:center; margin-top:10px; opacity:.6">tasik • ig: @_cntikaaa__ • email: cantikalaura091@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="dock">
+  <a href="#beranda">🏠</a>
+  <a href="#riwayat">📜</a>
+  <a href="#profil">💖</a>
+  <a href="#pengalaman">✨</a>
+  <a href="#kontak">💌</a>
+</div>
+
+<script>
+// animasi pita jatuh
+const ribbons = ['🎀','💖','🌸','💌','✨'];
+setInterval(()=>{
+  const el=document.createElement('div');
+  el.className='ribbon';
+  el.innerText=ribbons[Math.floor(Math.random()*ribbons.length)];
+  el.style.left=Math.random()*100+'vw';
+  el.style.animationDuration=(3+Math.random()*4)+'s';
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),6000);
+},300);
+
+// drag window ala macOS
+document.querySelectorAll('.window').forEach(win=>{
+  const head=win.querySelector('.win-head');
+  let isDown=false, startX, startY, origX, origY;
+  head.addEventListener('mousedown',e=>{
+    isDown=true; startX=e.clientX; startY=e.clientY;
+    const rect=win.getBoundingClientRect();
+    origX=rect.left; origY=rect.top;
+    win.style.position='relative'; win.style.zIndex=99;
+  });
+  window.addEventListener('mousemove',e=>{
+    if(!isDown) return;
+    win.style.left=(e.clientX-startX)+'px';
+    win.style.top=(e.clientY-startY)+'px';
+  });
+  window.addEventListener('mouseup',()=>{ isDown=false; win.style.zIndex=1 });
+});
+</script>
+</body>
+</html>
